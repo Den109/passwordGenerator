@@ -1,6 +1,6 @@
   const btnEl = document.querySelector('.btn')
   const inputEl = document.getElementById('input');
-  const copyIconEl = document.querySelector(".fa-clipboard")
+  const copyIconEl = document.querySelector(".icon-clipboard-regular")
   const alertContainerEl = document.querySelector(".alert-container")
 btnEl.addEventListener('click', ()=>{
     // console.log('yes')

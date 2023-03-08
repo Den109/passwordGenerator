@@ -37,16 +37,17 @@ body {
     letter-spacing: 0;
 }
 
-.fa-clipboard{
+.icon-clipboard-regular{
+    font-size: 25px;
     cursor: pointer;
     opacity: 0.3;
     transition: .3s;
 }
 
-.fa-clipboard:hover{
+.icon-clipboard-regular:hover{
     opacity: 0.8;
 }
-.fa-clipboard:active{
+.icon-clipboard-regular:active{
     transform: scale(0.95);
 }
 .btn{
