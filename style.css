@@ -4,14 +4,21 @@ body {
     height: 100vh;
     align-items: center;
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Calibri', 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+    min-height: 100vh;
+    background-color: #0c192c;
 }
 .password-container{
-    background-color: bisque;
+    position: absolute;
+    z-index: 100;
+    background-color: lightskyblue;
     width: 500px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3) ;
+    box-shadow: 0 0 0 1px #4fc3dc44,
+    0 0  20px #4fc3dc,
+    0 0 40px #4fc3dc;
 }
 
 .input-container{
@@ -24,7 +31,6 @@ body {
 }
 
 .input{
-    border: 2px solid red;
    border: none;
    outline: none;
    width: 100%;
@@ -51,8 +57,11 @@ body {
     transform: scale(0.95);
 }
 .btn{
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: black;    
+    box-shadow: 0 0 0 1px #4fc3dc44,
+    0 0  50px #4fc3dc,
+    0 0 10px #4fc3dc;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -63,8 +72,8 @@ body {
 }
 
 .btn:hover{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 }
 .btn:active{
     transform: scale(0.95)
@@ -72,11 +81,15 @@ body {
 
 .alert-container{
     position: fixed;
+    z-index: 10;
     right: 20px;
     bottom: 20px;
     width: 400px;
     height: 50px;
     background-color: lightskyblue;
+    box-shadow: 0 0 0 1px #4fc3dc44,
+    0 0  20px #4fc3dc,
+    0 0 40px #4fc3dc;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -87,4 +100,55 @@ body {
 }
 .active.alert-container{
     right: -400px;
+}
+
+
+
+
+
+
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* border: 2px solid red; */
+}
+.bubbles{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0  50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 10s linear infinite;
+    animation-duration: calc(125s / var(--i));
+
+}
+.bubbles span:nth-child(even){
+    background-color: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+    0 0  50px #4fc3dc,
+    0 0 100px #4fc3dc;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(100vh) scale(0)
+    }
+     100%
+    {
+         transform: translateY(-10vh) scale(1) 
+
+    } 
 }
